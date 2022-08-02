@@ -103,16 +103,6 @@ abstract class BaseListViewModel : BaseViewModel() {
             MyApplication.getMyString(R.string.result_not_supported)
         }
 
-//    @SuppressLint("PrivateApi", "DiscouragedPrivateApi")
-//    protected fun setStringProperty(key: String, value: String) {
-//        Class.forName("android.os.SystemProperties").getDeclaredMethod(
-//            "set",
-//            String::class.java,
-//            String::class.java
-//        ).invoke(null, key, value)
-//    }
-
-    @SuppressLint("PrivateApi")
     protected fun getBooleanProperty(key: String, condition: Boolean = true) =
         if (condition) {
             Class.forName("android.os.SystemProperties").getDeclaredMethod(
